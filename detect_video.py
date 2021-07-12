@@ -211,7 +211,7 @@ if __name__ == "__main__":
 
     ##-----video
     if(opt.export_video_frame==True):
-        vidcap = cv2.VideoCapture('data/sample_videos/sample1.mkv.mp4')
+        vidcap = cv2.VideoCapture('data/sample_videos/sample1.mkv')
         def getFrame(sec,imgarr):
             vidcap.set(cv2.CAP_PROP_POS_MSEC,sec*1000)
             hasFrames,image = vidcap.read()
