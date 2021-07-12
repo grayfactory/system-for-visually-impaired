@@ -628,7 +628,9 @@ if __name__ == "__main__":
     fps = 24 #24 #frame per second
     pathOut = 'output/rg.mp4'
     size=(2464,1386)#(2464,1386)
-    out = cv2.VideoWriter(pathOut,cv2.VideoWriter_fourcc(*'DIVX'), fps, size)
+    # out = cv2.VideoWriter(pathOut,cv2.VideoWriter_fourcc(*'DIVX'), fps, size)
+    fourcc = cv2.VideoWriter_fourcc(*'MPEG')
+    out = cv2.VideoWriter('output.avi',fourcc, fps, size)
     for i in range(len(imgarr)):
         # writing to a image array
         out.write(imgarr[i])
