@@ -180,7 +180,7 @@ if __name__ == "__main__":
     parser.add_argument("--n_cpu", type=int, default=0, help="number of cpu threads to use during batch generation")
     parser.add_argument("--img_size", type=int, default=416, help="size of each image dimension")
     parser.add_argument("--use_custom", type=bool, default=False, help="trained weight")
-    parser.add_argument("--export_video_frame",default=False,type=bool) #비디오 프레임부터 꺼내야할때
+    parser.add_argument("--export_video_frame",default=True,type=bool) #비디오 프레임부터 꺼내야할때
     opt = parser.parse_args()
 
     # Use custom weight
